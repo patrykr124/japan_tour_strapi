@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_lead_blocks",
+  "info": {
+    "displayName": "Lead block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    }
+  }
+}

@@ -39,6 +39,19 @@ export interface BlocksInfoBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksLeadBlock extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_lead_blocks';
+  info: {
+    description: '';
+    displayName: 'Lead block';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.RichText;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsCarousel extends Struct.ComponentSchema {
   collectionName: 'components_elements_carousels';
   info: {
@@ -80,6 +93,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blocks.hero-section': BlocksHeroSection;
       'blocks.info-block': BlocksInfoBlock;
+      'blocks.lead-block': BlocksLeadBlock;
       'elements.carousel': ElementsCarousel;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;

@@ -4,7 +4,7 @@ import Image from "next/image";
 type H = { infoData: InfoSection }
 
 export default function InfoSection({ infoData }: H) {
-  console.log(infoData)
+
   return (
     <div className="wrapper py-64">
       <div className="grid grid-cols-3">

@@ -1,0 +1,58 @@
+https://docs.strapi.io/cms/api/rest/interactive-query-builder
+
+
+
+
+{
+  populate: {
+    blocks: {
+      on: {
+        "blocks.hero-section": {
+          populate: {
+            background: {
+            populate:{
+               fields: ["url"],
+            }
+             
+            },
+            logo: true,
+            cta: true,
+            carousel:{
+              populate:{
+                image: true,
+              }
+            }
+          },
+        },
+        
+        
+      "blocks.info-block": {
+        populate: {
+          image: {
+            populate: {
+              fields: ["url"],
+          },
+        },
+    cta: true,
+    icon1: true,
+    icon2: true,
+    icon3: true,
+  },
+},
+
+
+
+
+"blocks.lead-block": {
+       
+    cta: true,
+   
+   
+    
+  },
+}
+  
+        },
+    },
+  },
+};

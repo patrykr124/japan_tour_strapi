@@ -61,4 +61,12 @@ export type ButtonType={
       isExternal: boolean;
     }[];
   }
+
+
+  export type LeadSection = {
+    __component: "blocks.lead-block";
+    id: number;
+    text: string;
+    description: string;
+  }
   
