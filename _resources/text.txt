@@ -40,17 +40,12 @@ https://docs.strapi.io/cms/api/rest/interactive-query-builder
   },
 },
 
+ "blocks.lead-block": {
+ populate:{
+ cta:true,
+ }
+ }
 
-
-
-"blocks.lead-block": {
-       
-    cta: true,
-   
-   
-    
-  },
-}
   
         },
     },
