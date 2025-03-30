@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_parallax_blocks",
+  "info": {
+    "displayName": "parallax block"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -69,4 +69,25 @@ export type ButtonType={
     text: string;
     description: string;
   }
+
+
+  export type ParallaxSection = {
+    __component: "blocks.parallax-block";
+    id: number;
+    image: Media;
+    text: string;
+  }
+
+
+  
+  export type AboutSection = {
+    __component: "blocks.about-block";
+    id: number;
+    text: string;
+    image1: Media;
+    image2: Media;
+    image3: Media;
+    image4: Media;
+    description: string;
+  }
   

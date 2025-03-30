@@ -16,7 +16,9 @@
       "components": [
         "blocks.info-block",
         "blocks.hero-section",
-        "blocks.lead-block"
+        "blocks.lead-block",
+        "blocks.parallax-block",
+        "blocks.about-block"
       ]
     }
   }

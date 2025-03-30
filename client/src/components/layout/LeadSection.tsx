@@ -15,7 +15,7 @@ export default function LeadSection({ leadData }: H) {
                     <p>{leadData.description}</p>
                 </div>
                 <form className="flex gap-4">
-                    <input className="outline-none border-b-2 w-full placeholder:text-xl py-4" placeholder="Enter your email" />
+                    <input className="outline-none border-b-[1px] w-full placeholder:text-xl py-4 border-white/50" placeholder="Enter your email" />
                     <button className="bg-indigo-700 w-[160px] text-lg px-4 py-2 rounded-lg text-center">Send</button>
                 </form>
             </div>

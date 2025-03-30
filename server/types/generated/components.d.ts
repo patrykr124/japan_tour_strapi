@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksAboutBlock extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_about_blocks';
+  info: {
+    displayName: 'about block';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    image1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image4: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_hero_sections';
   info: {
@@ -52,6 +67,17 @@ export interface BlocksLeadBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksParallaxBlock extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_parallax_blocks';
+  info: {
+    displayName: 'parallax block';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsCarousel extends Struct.ComponentSchema {
   collectionName: 'components_elements_carousels';
   info: {
@@ -91,9 +117,11 @@ export interface ElementsLogo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.about-block': BlocksAboutBlock;
       'blocks.hero-section': BlocksHeroSection;
       'blocks.info-block': BlocksInfoBlock;
       'blocks.lead-block': BlocksLeadBlock;
+      'blocks.parallax-block': BlocksParallaxBlock;
       'elements.carousel': ElementsCarousel;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;
