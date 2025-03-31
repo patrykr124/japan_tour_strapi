@@ -16,20 +16,21 @@ export default function About({ aboutData }: H) {
             </div>
             <div className="">
                 <div className="flex justify-around">
+                    <div className="-mt-40">
+                        <Image src={`http://localhost:1337${aboutData.image2.url}`} width={400} height={500} alt={aboutData.image1.alternativeText || ''} />
+                    </div>
                     <div className="">
                         <Image src={`http://localhost:1337${aboutData.image1.url}`} width={500} height={500} alt={aboutData.image1.alternativeText || ''} />
                     </div>
-                    <div className="mt-20">
-                        <Image src={`http://localhost:1337${aboutData.image2.url}`} width={500} height={500} alt={aboutData.image1.alternativeText || ''} />
-                    </div>
                 </div>
                 <div className="flex justify-around">
-                    <div className="-mt-56">
-                        <Image src={`http://localhost:1337${aboutData.image3.url}`} width={450} height={450} alt={aboutData.image1.alternativeText || ''} />
-                    </div>
-                    <div className="mt-20 mr-20">
+                    <div className="mt-56 ">
                         <Image src={`http://localhost:1337${aboutData.image4.url}`} width={500} height={500} alt={aboutData.image1.alternativeText || ''} />
                     </div>
+                    <div className="mt-20">
+                        <Image src={`http://localhost:1337${aboutData.image3.url}`} width={450} height={450} alt={aboutData.image1.alternativeText || ''} />
+                    </div>
+
                 </div>
             </div>
         </section>

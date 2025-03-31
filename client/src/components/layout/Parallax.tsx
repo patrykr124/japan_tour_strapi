@@ -5,7 +5,7 @@ type H = {
 }
 
 export default function Parallax({ parallaxData }: H) {
-    console.log(parallaxData);
+   
     return (
         <section className="py-42 relative" >
 

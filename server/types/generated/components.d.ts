@@ -67,6 +67,19 @@ export interface BlocksLeadBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksOfferBlock extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_offer_blocks';
+  info: {
+    description: '';
+    displayName: 'offer block';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.RichText;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksParallaxBlock extends Struct.ComponentSchema {
   collectionName: 'components_blocks_parallax_blocks';
   info: {
@@ -121,6 +134,7 @@ declare module '@strapi/strapi' {
       'blocks.hero-section': BlocksHeroSection;
       'blocks.info-block': BlocksInfoBlock;
       'blocks.lead-block': BlocksLeadBlock;
+      'blocks.offer-block': BlocksOfferBlock;
       'blocks.parallax-block': BlocksParallaxBlock;
       'elements.carousel': ElementsCarousel;
       'elements.link': ElementsLink;

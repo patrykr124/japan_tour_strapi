@@ -6,7 +6,7 @@ type H = { infoData: InfoSection }
 export default function InfoSection({ infoData }: H) {
 
   return (
-    <div className="wrapper py-64">
+    <div className="wrapper py-56">
       <div className="grid grid-cols-3">
         <div className="space-y-8">
           <h2 className="text-5xl">{infoData.headline}</h2>

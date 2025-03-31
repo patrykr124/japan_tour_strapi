@@ -18,7 +18,8 @@
         "blocks.hero-section",
         "blocks.lead-block",
         "blocks.parallax-block",
-        "blocks.about-block"
+        "blocks.about-block",
+        "blocks.offer-block"
       ]
     }
   }

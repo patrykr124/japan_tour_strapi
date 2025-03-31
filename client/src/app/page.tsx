@@ -3,8 +3,10 @@ import Header from "@/components/layout/Header";
 import Info from "@/components/layout/Info";
 import InfoSection from "@/components/layout/InfoSection";
 import LeadSection from "@/components/layout/LeadSection";
+import Offer from "@/components/layout/Offer";
 import Parallax from "@/components/layout/Parallax";
-import  { InfoFetch, HeaderFetch, LeadFetch, ParallaxFetch, AboutFetch } from "@/data/homeFetch";
+import { AboutFetch, HeaderFetch, InfoFetch, LeadFetch, OfferFetch, ParallaxFetch } from "@/data/homeFetch";
+import { ProductsFetch } from "@/data/productsFetch";
 import { notFound } from "next/navigation";
 
 export default async function Home() {
@@ -13,7 +15,9 @@ export default async function Home() {
   const leadData = await LeadFetch()
   const parallaxData = await ParallaxFetch()
   const aboutData = await AboutFetch()
-  if (!headerData || !infoData || !leadData || !parallaxData || !aboutData) notFound()
+  const offerData = await OfferFetch();
+  const products = await ProductsFetch()
+  if (!headerData || !infoData || !leadData || !parallaxData || !aboutData || !offerData) notFound()
 
 
   return (
@@ -24,6 +28,7 @@ export default async function Home() {
       <LeadSection leadData={leadData} />
       <Parallax parallaxData={parallaxData} />
       <About aboutData={aboutData} />
+      <Offer offerData={offerData} products={products} />
     </>
   );
 }

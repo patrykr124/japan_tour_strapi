@@ -10,44 +10,75 @@ https://docs.strapi.io/cms/api/rest/interactive-query-builder
         "blocks.hero-section": {
           populate: {
             background: {
-            populate:{
-               fields: ["url"],
-            }
-             
+              populate: {
+                fields: ["url"],
+              },
             },
             logo: true,
             cta: true,
-            carousel:{
-              populate:{
+            carousel: {
+              populate: {
                 image: true,
-              }
-            }
+              },
+            },
           },
         },
-        
-        
-      "blocks.info-block": {
-        populate: {
-          image: {
-            populate: {
-              fields: ["url"],
+
+        "blocks.info-block": {
+          populate: {
+            image: {
+              populate: {
+                fields: ["url"],
+              },
+            },
+            cta: true,
+            icon1: true,
+            icon2: true,
+            icon3: true,
           },
         },
-    cta: true,
-    icon1: true,
-    icon2: true,
-    icon3: true,
-  },
-},
 
- "blocks.lead-block": {
- populate:{
- cta:true,
- }
- }
-
-  
+        "blocks.lead-block": {
+          populate: {
+            cta: true,
+          },
         },
+
+        "blocks.parallax-block": {
+          populate: {
+            image: {
+              populate: {
+                fields: ["url"],
+              },
+            },
+          },
+        },
+
+        "blocks.about-block": {
+          populate: {
+            image1: {
+              populate: {
+                fields: ["url"],
+              },
+            },
+            image2: {
+              populate: {
+                fields: ["url"],
+              },
+            },
+            image3: {
+              populate: {
+                fields: ["url"],
+              },
+            },
+            image4: {
+              populate: {
+                fields: ["url"],
+              },
+            },
+          },
+        },
+      },
     },
   },
-};
+}

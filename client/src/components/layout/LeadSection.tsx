@@ -5,7 +5,7 @@ type H = {
 }
 
 export default function LeadSection({ leadData }: H) {
-    console.log(leadData)
+  
     return (
         <section className="wrapper">
             <div className="space-y-8">

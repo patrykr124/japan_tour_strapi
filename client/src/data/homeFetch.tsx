@@ -1,5 +1,5 @@
 import { fetchStrapiData } from "@/lib/strapiFetch";
-import type { AboutSection, HeroSection, InfoSection, LeadSection, ParallaxSection } from "@/types";
+import type { AboutSection, HeroSection, InfoSection, LeadSection, OfferSection, ParallaxSection } from "@/types";
 
 export async function HeaderFetch(): Promise<HeroSection | null> {
   try {
@@ -87,3 +87,23 @@ export async function AboutFetch(): Promise<AboutSection | null> {
     return null;
   }
 }
+
+
+
+
+export async function OfferFetch(): Promise<OfferSection | null> {
+  try {
+    const data = await fetchStrapiData("home-page")
+    if (!data) {
+      console.log("Empty!")
+      return null;
+    }
+    const blocks = data.blocks
+    const heroSection = blocks.find((block: OfferSection) => block.__component === 'blocks.offer-block')
+    return { ...heroSection }
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+

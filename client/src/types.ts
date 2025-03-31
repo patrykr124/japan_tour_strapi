@@ -90,4 +90,29 @@ export type ButtonType={
     image4: Media;
     description: string;
   }
+
+  export type OfferSection = {
+    __component: "blocks.offer-block";
+    id: number;
+    text: string;
+    description: string;
+  }
+
+  export type Product = {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    image: Media;
+    Dinner: boolean;
+    guide: boolean;
+    Hotel: boolean;
+    Wifi: boolean;
+    cta:{
+      id: number;
+      text: string;
+      href: string;
+      isExternal: boolean;
+    }
+  };
   
